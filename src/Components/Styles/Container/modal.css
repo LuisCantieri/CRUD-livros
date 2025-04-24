@@ -1,0 +1,50 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.conteudoModal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    width: 300px;
+    background: #008fb3;
+    border-radius: 10px;
+    color: white;
+}
+
+.conteudoModal input, input::placeholder{
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.btnSalvar{
+    color: white;
+    font-size: 1rem;
+    background: green;
+    border: none;
+    padding: 5px 10px;
+}
+.btnCancelar{
+    color: white;
+    font-size: 1rem;
+    background: red;
+    border: none;
+    padding: 5px 10px;
+}
+

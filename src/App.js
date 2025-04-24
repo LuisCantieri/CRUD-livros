@@ -5,8 +5,8 @@ import Container from './Components/Container/index.js'
 function App() {
   return (
     <>
-      <Header/>
-      <Container/>
+      <Header />
+      <Container />
     </>
   )
 }

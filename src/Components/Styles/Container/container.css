@@ -1,0 +1,56 @@
+@import url(modal.css);
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    margin: 30px;
+    border: 2px solid black;
+    width: 380px;
+    max-width: 400px;
+}
+
+.card img {
+    width: 150px;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info p {
+    margin: 10px;
+    font-size: 1rem;;
+}
+
+.btnAdd {
+    background: #04a8d1;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    height: 30px;
+    border: 2px solid black;
+    margin: 30px;
+}
+
+.btnRemover{
+    background: red;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+.btnAtualizar{
+    background: #03c0f0;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
