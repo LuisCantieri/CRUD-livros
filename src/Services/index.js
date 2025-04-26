@@ -14,3 +14,11 @@ export const removerLivro = (livros, id) => {
     localStorage.setItem("livros", JSON.stringify(novosLivros));
     return novosLivros;
 };
+
+export const atualizarLivro = (livros, livroAtualizado) => {
+    const livrosAtualizados = livros.map(livro =>
+        livro.id === livroAtualizado.id ? livroAtualizado : livro
+    );
+    localStorage.setItem("livros", JSON.stringify(livrosAtualizados));
+    return livrosAtualizados;
+};
