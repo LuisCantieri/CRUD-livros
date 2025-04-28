@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import '../Styles/Container/container.css';
-
+import { Modal, Button, Form, Card, Container } from 'react-bootstrap';
+import '../Styles/Container/container.css'; // seu CSS
 import {
     carregarLivros,
     salvarLivro,
@@ -8,7 +8,7 @@ import {
     atualizarLivro
 } from '../../Services/index.js';
 
-export default function Container() {
+export default function BookContainer() {
     const [showModal, setShowModal] = useState(false);
     const [livros, setLivros] = useState([]);
     const [livroEditando, setLivroEditando] = useState(null);
@@ -77,40 +77,58 @@ export default function Container() {
     };
 
     return (
-        <div className="container">
+        <Container className="container">
             {livros.map((livro) => (
-                <div key={livro.id} className="card">
-                    <img src={livro.imagem} alt="Capa do livro" />
-                    <div className="info">
-                        <p><strong>Título:</strong> {livro.titulo}</p>
-                        <p><strong>Autor:</strong> {livro.autor}</p>
-                        <p><strong>Ano de Lançamento:</strong> {livro.ano}</p>
-                        <button className="btnRemover" onClick={() => removerPeloId(livro.id)}>Remover</button>
-                        <button className="btnEditar" onClick={() => editarLivro(livro)}>Editar</button>
-                    </div>
-                </div>
+                <Card key={livro.id} className="card">
+                    <Card.Img variant="top" src={livro.imagem} alt="Capa do livro" />
+                    <Card.Body className="info">
+                        <Card.Title><strong>Título:</strong> {livro.titulo}</Card.Title>
+                        <Card.Text><strong>Autor:</strong> {livro.autor}</Card.Text>
+                        <Card.Text><strong>Ano de Lançamento:</strong> {livro.ano}</Card.Text>
+                        <Button variant="danger" className="btnRemover" onClick={() => removerPeloId(livro.id)}>Remover</Button>
+                        <Button variant="info" className="btnEditar" onClick={() => editarLivro(livro)}>Editar</Button>
+                    </Card.Body>
+                </Card>
             ))}
 
-            <div className="btnAdd" onClick={abrirModalParaAdicionar}>
-                <p>Adicionar livro +</p>
-            </div>
+            <Button variant="primary" className="btnAdd" onClick={abrirModalParaAdicionar}>
+                Adicionar livro +
+            </Button>
 
+            {/* Modal corrigido */}
             {showModal && (
-                <div className="modal">
-                    <div className="conteudoModal">
+                <div className="custom-modal-overlay">
+                    <div className="custom-modal-content">
                         <h2>{livroEditando ? 'Editar Livro' : 'Adicionar Livro'}</h2>
-                        <input id="imagem" placeholder="URL da imagem" />
-                        <input id="titulo" placeholder="Nome do livro" />
-                        <input id="autor" placeholder="Autor" />
-                        <input id="ano" placeholder="Ano de lançamento" />
-                        <button onClick={salvarLivros} className="btnSalvar">Salvar</button>
-                        <button onClick={() => {
-                            setShowModal(false);
-                            setLivroEditando(null);
-                        }} className="btnCancelar">Cancelar</button>
+                        <Form>
+                            <Form.Group controlId="imagem">
+                                <label className="imagemL">Imagem de URL:</label> <br></br>
+                                <Form.Control className="imagem" type="text" placeholder="Insira a URL da imagem" />
+                            </Form.Group>
+                            <Form.Group controlId="titulo">
+                            <label className="tituloL">⠀Título:</label> <br></br>
+                                <Form.Control className="titulo" type="text" placeholder="Título do livro" />
+                            </Form.Group>
+                            <Form.Group controlId="autor">
+                            <label className="autorL">Autor:</label> <br></br>
+                                <Form.Control className="autor" type="text" placeholder="Nome do autor" />
+                            </Form.Group>
+                            <Form.Group controlId="ano">
+                            <label className="anoL">Ano de lançamento:</label> <br></br>
+                                <Form.Control className="ano" type="text" placeholder="Ano de lançamento" />
+                            </Form.Group>
+                        </Form>
+                        <div className="modal-buttons">
+                            <Button className="btnCancelar" onClick={() => setShowModal(false)}>
+                                Cancelar
+                            </Button>
+                            <Button className="btnSalvar" onClick={salvarLivros}>
+                                Salvar
+                            </Button>
+                        </div>
                     </div>
                 </div>
             )}
-        </div>
+        </Container>
     );
 }

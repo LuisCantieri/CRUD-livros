@@ -10,21 +10,20 @@
     display: flex;
     margin: 30px;
     border: 2px solid black;
-    width: 380px;
-    max-width: 400px;
+    width: 405px;
 }
 
 .card img {
     width: 150px;
 }
 
-.info {
+.card-body {
     padding: 20px;
 }
 
-.info p {
+.card-body p {
     margin: 10px;
-    font-size: 1rem;;
+    font-size: 1rem;
 }
 
 .btnAdd {
@@ -37,20 +36,23 @@
     height: 30px;
     border: 2px solid black;
     margin: 30px;
+    border-radius: 3px;
 }
 
-.btnRemover{
+.btnRemover {
     background: red;
     border: none;
     color: white;
     padding: 10px;
     margin: 10px;
+    border: 2px solid black;
 }
 
-.btnEditar{
+.btnEditar {
     background: #03c0f0;
     border: none;
     color: white;
     padding: 10px;
     margin: 10px;
+    border: 2px solid black;
 }
