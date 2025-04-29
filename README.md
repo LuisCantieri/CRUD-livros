@@ -55,7 +55,7 @@ A aplicação foi desenvolvida usando **React** com **React-Bootstrap** para est
  - npm install
  - npm install react-bootstrap bootstrap
 
- E por fim, **npm install**
+ E por fim, **npm start** para começar a aplicação
 
  # Como acessar - **Vercel** 🖥️
 
