@@ -42,13 +42,13 @@ A aplicação foi desenvolvida usando **React** com **React-Bootstrap** para est
 
  ### **Passo 1**
  Acesse: 
- - https://github.com/LuisCantieri/CRUD-livros 
+ - https://github.com/LuisCantieri/CRUD-livros <br>
  e então clique em "CODE", copiando a URL a seguir:
  - https://github.com/LuisCantieri/CRUD-livros.git
 
  ### **Passo 2**
  ##### ⚠️ **NECESSITA GIT INSTALADO**
- Comando: git clone + o link acima
+ Comando: git clone + o link acima <br>
  Comando: cd + nome da pasta
 
  **Dependências:**
