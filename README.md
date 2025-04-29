@@ -1,72 +1,63 @@
-# Getting Started with Create React App
+# 📚 BookHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bem-vindo ao **BookHub**!
 
-## Available Scripts
+Este é um projeto integrador simples que implementa um **CRUD de livros**, onde você pode:
 
-In the project directory, you can run:
+✅ **Cadastrar livros**  
+✏️ **Editar informações de livros**  
+📖 **Visualizar uma lista de livros**  
+❌ **Excluir livros**  
 
-### `npm start`
+A aplicação foi desenvolvida usando **React** com **React-Bootstrap** para estilização e componentes prontos. O foco do projeto é a prática de operações de CRUD, demonstrando de forma fácil o funcionamento de um (hospedado em: Vercel).
+<br>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📂 Estrutura de Pastas
+**📂 src**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**assets**
+ - 🖼️ maozinha.png  - Logo do site
 
-### `npm test`
+ **Components**
+ - 📂 Container
+ index.js - renderiza os elementos do container
+ - 📂 Header
+ index.js - renderiza os elementos do header
+ - ✏️ Styles/Container
+ container.css - estilização visual dos elementos do container
+ modal.css - estilização visual dos elementos do modal
+ 
+ 
+ **Services**
+ - ⚙️ index.js - métodos do CRUD
+ 
+ <br>
+ 
+ **App.js (fora do scr)** - componente principal
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ <br>
 
-### `npm run build`
+ # Como acessar - **Github** 😺
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ ### **Passo 1**
+ Acesse: 
+ - https://github.com/LuisCantieri/CRUD-livros 
+ e então clique em "CODE", copiando a URL a seguir:
+ - https://github.com/LuisCantieri/CRUD-livros.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ ### **Passo 2**
+ ##### ⚠️ **NECESSITA GIT INSTALADO**
+ Comando: git clone + o link acima
+ Comando: cd + nome da pasta
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ **Dependências:**
+ - npm install
+ - npm install react-bootstrap bootstrap
 
-### `npm run eject`
+ E por fim, **npm install**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ # Como acessar - **Vercel** 🖥️
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# CRUD-livros" 
-"# CRUD-livros" 
+Acesse o link a seguir:
+- crud-livros-nine.vercel.app
